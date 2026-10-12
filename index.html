@@ -7,11 +7,13 @@ body{margin:0;font-family:system-ui;background:#111;color:#fff}
 iframe{position:fixed;inset:0;width:100%;height:100%;border:0;background:#000;display:none}
 #x{position:fixed;top:8px;right:8px;z-index:2;display:none}
 </style>
+<h4>Nexus</h4>
+<p>Un site crée par Sergeï Lavroff. Dernière mise a jour: 11/10/2026. Version 1.0</p>
 <div id="grid"></div>
-<button id="x">Close</button>
+<button id="x">Fermer</button>
 <iframe id="f"></iframe>
 <script>
-const games=[{name:"Rail Dash",url:"games/rail-dash.html"}, {name:"Cube Rush",url:"games/cube-rush.html"}, {name:"Dernière Lumière",url:"games/last-light.html"}];
+const games=[{name:"Rail Dash",url:"games/rail-dash.html"}, {name:"Cube Rush",url:"games/cube-rush.html"}, {name:"Dernière Lumière",url:"games/last-light.html"}, {name:"Missile Strike",url:"games/missile-strike.html"}];
 const f=document.getElementById("f"),x=document.getElementById("x");
 document.getElementById("grid").innerHTML=games.map((g,i)=>`<div class="g" onclick="play(${i})">${g.name}</div>`).join("");
 function play(i){f.src=games[i].url;f.style.display=x.style.display="block"}
